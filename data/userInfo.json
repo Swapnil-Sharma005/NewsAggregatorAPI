@@ -1,0 +1,11 @@
+{
+      "users":[
+    {
+        "username": "swapnil",
+        "email": "swapnil@gmail.com",
+        "password": "1234",
+        "newsPreferencesCategories":["technology", "business"]                
+      }
+    ]
+}
+
