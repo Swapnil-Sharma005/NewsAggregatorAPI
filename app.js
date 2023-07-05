@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const routes = express.Router();
-const userInfo = require("./data/userInfo.json");
+const userInfo = require("./data/userInfo");
 
 const app = express()
 const PORT = 3000;
