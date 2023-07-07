@@ -3,6 +3,8 @@ A RESTful API using Node.js, Express.js, and NPM packages.
 The API will allow users to register, log in, and set their news preferences (e.g., categories, sources).
 The API will then fetch news articles from multiple sources using external news APIs (e.g., NewsAPI) according to the user preferences.
 
+packages used: Express,axios,urlSearchParams,jwt,bcrypt,bodyParser.
+
 EndPoints are:
 
 POST /register: Register a new user.
