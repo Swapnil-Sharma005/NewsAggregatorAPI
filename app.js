@@ -32,3 +32,5 @@ app.listen(PORT, (error) => {
         console.log("Server failed to run");
     }
 })
+
+module.exports = app;
