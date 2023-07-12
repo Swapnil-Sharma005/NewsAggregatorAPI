@@ -43,7 +43,6 @@ var registerUser = (req, res) => {
 
 var loginUser = (req, res) => {
     const userDetails = req.body;
-    //const user = users.users.some(u => u.email === userDetails.email);
     let user = users.users.filter(val => val.email == userDetails.email);
     if (user) {
         var passwordIsValid = bcrypt.compareSync(req.body.password, user[0].password)
