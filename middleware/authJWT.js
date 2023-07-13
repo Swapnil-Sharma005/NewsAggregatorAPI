@@ -7,7 +7,9 @@ const verifyToken = (req, res, next) => {
         jwt.verify(req.headers.authorization.split(' ')[1], process.env.API_SECRET, function(error, decode){
             if(error){
                 req.user = undefined;
+                console.log(error);
                 next();
+                
             }
             let user = users.users.filter(val => val.email == decode.id);
             req.user = user[0];

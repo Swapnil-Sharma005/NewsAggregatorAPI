@@ -1,8 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const routes = express.Router();
-const { registerUser, loginUser, userPreferences, userPerferencesUpdate, newsFetch } = require("./controller/authController");
+const { registerUser, loginUser} = require("./controller/authController");
+const { userPreferences, userPerferencesUpdate, newsFetch } = require("./controller/newsController");
 const verifyToken = require('./middleware/authJWT');
+const responseTime = require('response-time');
 
 const app = express()
 const PORT = 3000;
@@ -10,6 +12,7 @@ const PORT = 3000;
 app.use(routes);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(responseTime());
 
 routes.use(bodyParser.urlencoded({ extended: false }));
 routes.use(bodyParser.json());
