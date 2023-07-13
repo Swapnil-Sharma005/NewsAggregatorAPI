@@ -4,8 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "test": "mocha --recursive 'test/**/*.js' --exit",
+    "start": "nodemon app.js",
+    "test-coverage": "nyc mocha --recursive 'test/**/*.js' --exit",
+    "test-report": "nyc report --reporter=html"
   },
   "author": "Swapnil Sharma",
   "license": "ISC",
@@ -13,12 +15,17 @@
     "axios": "^1.4.0",
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.2",
+    "chai": "^4.3.7",
+    "chai-http": "^4.4.0",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "fs": "^0.0.1-security",
     "jsonwebtoken": "^9.0.0",
+    "mocha": "^10.2.0",
     "nodemon": "^2.0.22",
+    "nyc": "^15.1.0",
     "path": "^0.12.7",
+    "sinon": "^15.2.0",
     "url-search-params": "^1.1.0"
   }
 }
