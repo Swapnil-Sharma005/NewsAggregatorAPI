@@ -44,7 +44,7 @@ var registerUser = (req, res) => {
 var loginUser = (req, res) => {
     const userDetails = req.body;
     let user = users.users.filter(val => val.email == userDetails.email);
-    if (user) {
+    if (user.length>0) {
         var passwordIsValid = bcrypt.compareSync(req.body.password, user[0].password)
         if (!passwordIsValid) {
             return res.status(401).send({

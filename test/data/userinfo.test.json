@@ -1,0 +1,10 @@
+{
+    "users": [
+        {
+            "username": "Swapnil",
+            "email": "tp@gmail.com",
+            "password": "$2b$08$e6snAnUUshjEhnWVKpv53.iZfCUAvUyXnj3VlHF9qPDpAjD3UE34q",
+            "newsPreferencesCategories": "apple"
+        }
+    ]
+}
